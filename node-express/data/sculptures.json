@@ -1,0 +1,55 @@
+{
+  "general_information": {
+    "gallery_collection": {
+      "title": "National Gallery Prague Cast Collection",
+      "description": "The National Gallery Prague owns a large collection of casts of medieval works. More than a dozen works have been selected from these, which clearly document the stylistic transformation of the sculptural form from the Romanesque period to the late Gothic. The selection clearly shows how the approach of sculptors to the depiction of religious images and everyday reality has changed over the centuries. The exhibited collection captures copies of stone sculptures and carvings. The originals of some of them have remained for centuries in the places for which they were created. This is the case, for example, with the portrait busts from Prague's St. Vitus Cathedral or the beautiful Pilsen Madonna. Others can be found today in the gallery exhibition."
+    },
+    "gothic_style": {
+      "title": "Gothic Sculpture",
+      "description": "The Gothic style has its roots in France and came to our country indirectly, especially through the Rhineland, in the middle of the 13th century. Medieval sculpture was closely linked to architecture in the early period. The statues were placed outside and inside. They often decorated portals and vestibules, in the interior they were on consoles, columns and pillars, and complemented the decoration of altars. Later, sculptures were increasingly used outside of architecture, which is related to the transformation of their format and the variety of materials used. In addition to stone sculptures, usually made of marl or sandstone, a number of wood carvings have been preserved. In the Czech lands, linden wood was most often used, rarely fruit trees and conifers. Wood carvings, as well as some stone sculptures, were usually provided with a colour treatment – polychromy."
+    }
+  },
+  "sculptures": [
+    {
+      "name": "Tympanum of the northern portal of the Church of Our Lady before Týn",
+      "year": "around 1380",
+      "location": "Prague",
+      "artist": "unknown",
+      "cast_information": "patinated plaster, detail of the right side upper segment Devil Fight with an Angel for the Soul of an Evil Thief",
+      "original_material": "marlstone, high relief",
+      "dimensions": "whole height 232 cm, width 302.5 cm",
+      "description": "The tympanum from the Church of Our Lady before Týn in Prague is an important monument from the reign of Wenceslas IV. It consists of five relief panels with passion scenes. The exhibited fragment of the Devil's Struggle for the Soul of the Evil Thief is only a small part of it. The devils are taking possession of the soul of a hardened thief. Three monsters with wild animal heads and a repulsive grin surround a figure struggling in mortal struggle. The devil on the right is holding the unfortunate man's left hand and leg tightly, while the other has grasped his right hand and his backward twisted head. The third one holds firmly the sole of the thief's right foot. The wrestling scene is the dramatic culmination of the tympanum decoration. Thoughtful movement dominates the entire composition. Originally, this relief was also polychromed."
+    },
+    {
+      "name": "Charles the fourth",
+      "year": "between 1375 - 1378",
+      "location": "St. Vitus Ironworks",
+      "artist": "unknown",
+      "cast_information": "epoxy resin, patinated",
+      "original_material": "sandstone",
+      "dimensions": "58 x 59 cm",
+      "description": "Charles IV was in 14th century. We can see its appearance in mural, panel and book paintings, in mosaics, in goldsmithing, on seals and coins. Portrait of Charles IV from the triforium of the Church of St. Vitus Like the other portrait busts, the bust was made life-size, polychrome and supplemented with a coat of arms. The portraits of the members of the royal family are arranged in a strictly hierarchical order. In the most honorable place in the middle is a bust of Charles IV. The king has large, widely spaced eyes. The upper eyelid is emphasized by two thick lines, the lower one is almost straight. A slightly open mouth under a strong short nose is bordered by a plastically emphasized moustache and beard. The hair is covered on the sides by long wide ribbons ending in fringes. They overlap the raised edge of the collar. They are the remnants of a mitre – a liturgical headgear."
+    },
+    {
+      "name": "Anna of Schweidnitz",
+      "year": "between 1375 - 1378",
+      "location": "St. Vitus Ironworks",
+      "artist": "unknown",
+      "cast_information": "patinated plaster",
+      "original_material": "sandstone",
+      "dimensions": "55 x 53 cm",
+      "description": "On 27 May 1353, Princess Anne, the fourteen-year-old daughter of Duke Henry of Schweidnitz, became the third wife of the then thirty-seven-year-old Charles IV. Two months later she was crowned Queen of Bohemia in Prague and Queen of the Romans on 9 February 1354 in Aachen. The portrait of Anna of Schweidnitz is one of the most charming busts of the triforium. The oval face on a slender neck with a high, wide forehead is lined with long natural strands of hair that fall freely over the shoulders. A gentle smile, joyful eyes, a small narrow nose and a small chin remind us of the loveliness of Madonnas of the emerging beautiful style. Anna of Schweidnitz's life ended prematurely. She died a year after the birth of her son Wenceslas (born 26.2.1361), the long-awaited heir to the throne."
+    },
+    {
+      "name": "Votive relief from the Basilica of St. George",
+      "year": "before 1228",
+      "description": "The relief consists of three parts, most likely secondarily connected into one whole. The area of the middle panel is filled with the most important figure of the Virgin Mary sitting on the throne. He is holding the baby Jesus on his lap, depicted in profile and with his blessing right hand raised. In both upper corners, angels with censers float on clouds. They place a crown on Mary's head, which is surrounded by a halo, just like in the case of angels. The engraved Latin inscription on the frame depicts the small figures kneeling under the steps of the throne at Mary's feet. On the left, Princess Mlada, sister of Prince Boleslav II, is depicted with folded hands. She was the abbess of the first female Benedictine monastery of St. Vitus. George at Prague Castle, which was founded by her brother in 973. On the opposite side, the praying abbess Berta is depicted. On the right wing, as is clear from the preserved inscription on the edge of the frame, kneels King Přemysl Otakar I, on the opposite wing there is a praying nun, probably Abbess Agnes, the king's half-sister.",
+      "style": "Oil on panel",
+      "location": "Bohemia",
+      "artist": "unknown",
+      "cast_information": "X0",
+      "original_information": "X",
+      "dimensions": "X"
+    }
+  ]
+}
