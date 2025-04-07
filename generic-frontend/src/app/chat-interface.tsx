@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { Send, Mic, MicOff, Power } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -184,18 +184,25 @@ const ChatInterface = () => {
     }
   };
 
-  const disconnect = async () => {
-    setIsConnected(false);
-    if (isRecording) {
-      await toggleRecording();
-    }
-    audioRecorderRef.current?.stop();
-    await audioPlayerRef.current?.clear();
-    await webSocketClient.current?.close();
+  const disconnect = useCallback(async () => {
+    const cleanup = async () => {
+      if (audioRecorderRef.current) {
+        audioRecorderRef.current.stop();
+      }
+      if (audioPlayerRef.current) {
+        await audioPlayerRef.current.clear();
+      }
+      if (webSocketClient.current) {
+        await webSocketClient.current.close();
+      }
+    };
+
+    await cleanup();
     webSocketClient.current = null;
     messageMap.current.clear();
+    setIsConnected(false);
     setMessages([]);
-  };
+  }, [audioPlayerRef, audioRecorderRef]);
 
   const sendMessage = async () => {
     if (currentMessage.trim() && webSocketClient.current) {
@@ -219,7 +226,7 @@ const ChatInterface = () => {
     }
   };
 
-  const toggleRecording = async () => {
+  const toggleRecording = useCallback(async () => {
     try {
       const newRecordingState = await handleAudioRecord(
         webSocketClient.current,
@@ -230,13 +237,14 @@ const ChatInterface = () => {
       console.error("Recording error:", error);
       setIsRecording(false);
     }
-  };
+  }, [handleAudioRecord, isRecording]);
 
   useEffect(() => {
     return () => {
-      disconnect();
+      // Using void to handle the promise
+      void disconnect();
     };
-  }, []);
+  }, [disconnect]);
 
   const validateEndpoint = (url: string) => {
     setEndpoint(url);
@@ -246,6 +254,22 @@ const ChatInterface = () => {
     } catch {
       setValidEndpoint(false);
     }
+  };
+
+  const downloadMessages = () => {
+    const messageText = Array.from(messageMap.current.values())
+      .map(msg => `[${msg.type}]: ${msg.content}`)
+      .join('\n');
+    
+    const blob = new Blob([messageText], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `chat-history-${new Date().toISOString().slice(0,19).replace(/:/g, '-')}.txt`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
 
   return (
@@ -276,6 +300,14 @@ const ChatInterface = () => {
         >
           <Power className="w-4 h-4 mr-2" />
           {isConnecting ? "Connecting..." : isConnected ? "Disconnect" : "Connect"}
+        </Button>
+        <Button
+          className="mt-2"
+          variant="outline"
+          onClick={downloadMessages}
+          disabled={messages.length === 0}
+        >
+          Download Chat History
         </Button>
       </div>
 
