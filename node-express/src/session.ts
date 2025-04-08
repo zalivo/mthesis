@@ -111,7 +111,7 @@ export class RTSession {
     const greeting: Connected = {
       type: "control",
       action: "connected",
-      greeting: "Hey there! I'm your friendly sculpture guide. Feel free to ask me anything about sculptures!",
+      greeting: "Hey there! I'm a guide in the National Gallery in Prague. Feel free to ask my anything that comes to your mind.",
     };
     this.send(greeting);
     this.logger.debug("Realtime session configured successfully");
